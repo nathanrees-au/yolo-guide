@@ -28,16 +28,29 @@ Download the `yolo-guide.pt` file and save to your cloned YOLOv7 directory.
 Run the standard YOLOv7 inference command with desired parameters, but specify the weights:
 
 ```python
---weights guide_dog_4_best.pt
+--weights yolo-guide.pt
 ```
 
 ## Additional Support
 
+### Fine-tune Parameters
+To adjust more parameters of the `detect.py` script, download the `detect-yolo-guide.py` file and adjust your desired parameters. Use this script when running the inference instead of `detect.py`.
+
+### Use Webcam
 To use your computer's webcam as the video source, specific the source:
 
 ```python
 --source 0
 ```
+
+### Adjust Confidence Threshold
+To adjust the confidence threshold of classified (and displayed) objects, specify the confidence threshold:
+
+```python
+--conf-thres 0.4
+```
+
+The default is 0.25.
 
 ## Acknowledgment
 
