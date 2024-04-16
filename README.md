@@ -19,38 +19,36 @@ View the publication based on our work here:
 
 Follow the steps outlined in the official [YOLOv7 repository](https://github.com/WongKinYiu/yolov7).
 
-## Download the custom YOLO-GUIDE weights
+## Download the Custom YOLO-GUIDE Weights
 
 Download the `yolo-guide.pt` file and save to your cloned YOLOv7 directory.
 
 ## Run Inference
 
-Run the standard YOLOv7 inference command with desired parameters, but specify the weights:
+Run the standard YOLOv7 inference command with desired parameters, but specify the weights as `--weights yolo-guide.pt`:
 
 ```python
---weights yolo-guide.pt
+python detect.py --weights yolo-guide.pt --source 0
 ```
 
 ## Additional Support
 
 ### Fine-tune Parameters
-To adjust more parameters of the `detect.py` script, download the `detect-yolo-guide.py` file and adjust your desired parameters. Use this script when running the inference instead of `detect.py`.
+To adjust more parameters for inference, download the `detect-yolo-guide.py` file and adjust your desired parameters. Use this script when running the inference instead of `detect.py`.
 
-### Use Webcam
-To use your computer's webcam as the video source, specific the source:
+### Change Video Source
+To change the video source the inference will be run on, specific the source as `--source yourvideo.mp4`:
 
 ```python
---source 0
+python detect.py --weights yolo-guide.pt --source yourvideo.mp4
 ```
 
 ### Adjust Confidence Threshold
-To adjust the confidence threshold of classified (and displayed) objects, specify the confidence threshold:
+The default confidence threshold is 0.25. To adjust the threshold of classified (and displayed) objects, specify the confidence threshold as `--conf-thres 0.4`:
 
 ```python
---conf-thres 0.4
+python detect.py --weights yolo-guide.pt --source 0 --conf-thres 0.4
 ```
-
-The default is 0.25.
 
 ## Acknowledgment
 
